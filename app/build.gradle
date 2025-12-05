@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.kotlinxSerialization)
     alias(libs.plugins.kapt)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.compose)
 }
 
 android {
@@ -34,6 +36,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+        compose true
     }
 }
 
@@ -62,6 +65,7 @@ dependencies {
     implementation libs.kotlinx.serializationJson
     implementation libs.androidx.datastore
     implementation libs.androidx.datastore.preferences
+    implementation libs.copmose.runtime
 
     implementation libs.dagger
     kapt libs.daggerCompiler
